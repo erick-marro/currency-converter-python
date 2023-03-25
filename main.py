@@ -22,12 +22,12 @@ def converter(currency_amount, target_value):
 
 
 def get_int(text: str):
-    try:
-        number = int(input(text))
-        return number
-    except ValueError:
-        print("Only numbers are allowed")
-        return
+    while True:
+        try:
+            number = int(input(text))
+            return number
+        except ValueError:
+            print("Error: Please enter a valid integer.")
 
 
 def convert_currency(currency_id):
