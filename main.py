@@ -18,7 +18,11 @@ supported_currencies = {
 
 
 def converter(currency_amount, target_value):
-    return currency_amount * target_value
+    while True:
+        try:
+            return currency_amount * target_value
+        except ZeroDivisionError:
+            print("The amount of dollars must be greater than 0")
 
 
 def get_int(text: str):
